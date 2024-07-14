@@ -12,8 +12,11 @@ namespace RaythosAerospace.Models
 		}
         [Key]
         public int CustomizationId { get; set; }
-        public string OptionName { get; set; }
-        public string OptionDetails { get; set; }
+        public string OptionCategory { get; set; }
+        public string FloorPlan { get; set; }
+        public string Interior { get; set; }
+        public string Ext_StripeColor { get; set; }
+        public double Price { get; set; }
 
         //Relationships
         public int AircraftId { get; set; }

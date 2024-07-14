@@ -11,6 +11,7 @@
     "RaythosAerospace": {
       "commandName": "Project",
       "launchBrowser": true,
+      "launchUrl": "Aircraft",
       "applicationUrl": "https://localhost:7230;http://localhost:5022",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

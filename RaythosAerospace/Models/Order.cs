@@ -10,9 +10,8 @@ namespace RaythosAerospace.Models
 		{
         }
         [Key]
-        public int OrderId { get; set; }
+        public int Id { get; set; }
 
-        public string CustomOptions { get; set; }
         public string OrderStatus { get; set; }
         public string PaymentStatus { get; set; }
         public DateTime OrderDate { get; set; }
@@ -26,6 +25,10 @@ namespace RaythosAerospace.Models
         public int AircraftId { get; set; }
         [ForeignKey("AircraftId")]
         public Aircraft Aircraft { get; set; }
+
+        public int CustomizationId { get; set; }
+        [ForeignKey("CustomizationId")]
+        public Customization Customization { get; set; }
     }
 }
 
