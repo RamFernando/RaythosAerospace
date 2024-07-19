@@ -10,15 +10,15 @@ namespace RaythosAerospace.Data
 		{
 		}
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Inventory>()
-            .HasOne(i => i.Aircraft)
-            .WithOne(a => a.Inventory)
-            .HasForeignKey<Inventory>(i => i.AircraftId);
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Inventory>()
+        //    .HasOne(i => i.Aircraft)
+        //    .WithOne(a => a.Inventory)
+        //    .HasForeignKey<Inventory>(i => i.AircraftId);
 
-            base.OnModelCreating(modelBuilder);
-        }
+        //    base.OnModelCreating(modelBuilder);
+        //}
 
         //public DbSet<AdminDashboard> AdminDashboard { get; set; }
         public DbSet<User> User { get; set; }

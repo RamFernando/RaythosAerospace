@@ -32,6 +32,12 @@ namespace RaythosAerospace.Controllers
         {
             if (!ModelState.IsValid)
             {
+                var errorMessages = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
+
+                foreach (var errorMessage in errorMessages)
+                {
+                    Console.WriteLine(errorMessage);
+                }
                 return View(aircraft);
             }
             await _service.AddAsync(aircraft);

@@ -12,9 +12,16 @@ namespace RaythosAerospace.Models
         [Key]
         public int Id { get; set; }
 
+        [Display(Name ="Order Status")]
         public string OrderStatus { get; set; }
+
+        [Display(Name = "Payment Status")]
         public string PaymentStatus { get; set; }
+
+        [Display(Name = "Order Date")]
         public DateTime OrderDate { get; set; }
+
+        [Display(Name = "Delivery Date")]
         public DateTime DeliveryDate { get; set; }
 
         //Relationships

@@ -1,0 +1,64 @@
+﻿@model User
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Register</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Register" method="post">
+                        <div class="from-group text-center">
+                            <img id="ImageURLPrev" class="aircraft" id="ImageURLPrev" style="max-width: 540px;" />
+                        </div>
+                        <div class="form-group" style="margin-top: 10px;">
+                            <label asp-for="ProfilePictureURL" class="control-label"></label>
+                            <input asp-for="ProfilePictureURL" class="form-control" />
+                            <span asp-validation-for="ProfilePictureURL" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Email" class="control-label"></label>
+                            <input asp-for="Email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="UserName" class="control-label"></label>
+                            <input asp-for="UserName" class="form-control" />
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Password" class="control-label"></label>
+                            <input asp-for="Password" type="password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Confirm Password</label>
+                            <input type="password" class="form-control" />
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="form-group" style="margin-top: 10px;">
+                            <button type="submit" class="btn btn-primary" style="background-color: rgb(16 51 59) !important;">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // $(document).ready(function () {
+        //     var output = document.getElementById('ImageURLPrev');
+        //     output.src = $("#ImageURL").val();
+        // })
+        $("#ImageURL").on("change", function () {
+            var output = document.getElementById('ImageURLPrev');
+            output.src = $(this).val();
+        })
+    </script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

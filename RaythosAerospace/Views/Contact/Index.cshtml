@@ -1,0 +1,38 @@
+﻿<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Contact Us</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Contact" method="post">
+                        <div class="form-group">
+                            <label  class="control-label">Name</label>
+                            <input  class="form-control" />
+                            <span  class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Email</label>
+                            <input  class="form-control" />
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Message</label>
+                            <textarea  class="form-control" rows="5"></textarea>
+                            <span class="text-danger"></span>
+                        </div>
+                        <div class="form-group" style="margin-top: 10px;">
+                            <button type="submit" class="btn btn-primary" style="background-color: rgb(16 51 59) !important;">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Include client-side validation *@
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>

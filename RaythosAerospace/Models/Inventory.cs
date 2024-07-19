@@ -14,10 +14,12 @@ namespace RaythosAerospace.Models
 		public int Id { get; set; }
 
 		[Display(Name ="Quantity")]
-		public int Quantity { get; set; }
+        [Required(ErrorMessage = "Quantity is Required")]
+        public int Quantity { get; set; }
 
 		[Display(Name ="Restock Date")]
-		public DateTime RestockDate { get; set; }
+        [Required(ErrorMessage = "Restock is Required")]
+        public DateTime RestockDate { get; set; }
 
         //Relationships
         public int AircraftId { get; set; }

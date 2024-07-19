@@ -32,7 +32,7 @@ namespace RaythosAerospace.Models
         [Display(Name = "Availability")]
         public bool Status { get; set; }
 
-        public Inventory Inventory { get; set; }
+        //public Inventory Inventory { get; set; }
     }
 }
 

@@ -11,6 +11,7 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(buil
 builder.Services.AddScoped<IAircraftService, AircraftService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IInventoryService, InventoryService>();
+//builder.Services.AddTransient<ILoginService, LoginService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
